@@ -1,0 +1,17 @@
+function sumAll(arr) {
+  "use strict";
+  var ans = [];
+  var sorted = arr.sort(function(x,y){
+  return x-y;
+});
+  var time = sorted[1] - sorted[0] + 1;
+  for(var i=0;i<time;i++){
+    ans[i] = sorted[0] + i;
+  }
+  var ans2 = ans.reduce(function(previousValue, currentValue) {
+  return previousValue + currentValue;
+});
+  return ans2;
+}
+
+sumAll([10, 5]);
