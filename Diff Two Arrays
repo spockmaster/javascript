@@ -1,0 +1,25 @@
+function diff(arr1, arr2) {
+  "use strict";
+  var arr3=[];
+  var arr4=[];
+  for(var i=0;i<arr1.length;i++){
+    if(arr2.indexOf(arr1[i]) > -1){
+      arr3[i] = "";
+    } else{
+      arr3[i] = arr1[i];
+    }
+  }
+    for(var j=0;j<arr2.length;j++){
+    if(arr1.indexOf(arr2[j]) > -1){
+      arr4[j] = "";
+    } else{
+      arr4[j] = arr2[j];
+    }
+  }
+  var arr5 = arr4.concat(arr3);
+  var arr6 = arr5.filter(function(val){
+    return val !== "";
+  });
+  return arr6;
+}
+diff([1, "calf", 3, "piglet"], [1, "calf", 3, 4]);
