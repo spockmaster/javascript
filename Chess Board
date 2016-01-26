@@ -1,0 +1,18 @@
+var space = true;
+var line = "";
+for(i=0;i<8;i++){
+  for(j=0;j<4;j++){
+    if(space){
+     line = line + " " + "#";
+    } else{
+     line = line + "#" + " ";
+    }
+  }
+  console.log(line);
+  line = ""
+  if(space === true){
+    space = false;
+  } else{
+   space = true; 
+  }
+}
