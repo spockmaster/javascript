@@ -1,0 +1,19 @@
+function mutation(arr) {
+  var lowerCase = arr[0].toLowerCase();
+  var lowerCase2 = arr[1].toLowerCase();
+  arr[0] = lowerCase;
+  arr[1] = lowerCase2;
+  var test=[];
+  for(i=0; i<arr[1].length; i++){
+    test[i] = arr[0].indexOf(arr[1][i]);
+  }
+  var test2 = test.indexOf(-1);
+  if(test2===-1){
+    return true;
+  } else{
+    return false;
+  }
+
+}
+
+mutation(["hi", "Hi"]);
