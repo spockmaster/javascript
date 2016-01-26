@@ -1,0 +1,9 @@
+function chunk(arr, size) {
+  var temp = [];
+    for(i=0; i<arr.length; i+=size){
+      temp.push(arr.slice(i, i + size));
+    }
+  return temp;
+}
+
+chunk([0, 1, 2, 3, 4, 5], 3);
