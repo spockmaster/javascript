@@ -1,0 +1,8 @@
+var temp = "";
+for(i=0;i<7;i++){
+  var number = 1
+  for(j=0;j<number;j++){
+    temp = temp + "#"
+  }
+  console.log(temp);
+}
