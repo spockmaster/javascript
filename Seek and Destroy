@@ -1,0 +1,10 @@
+function destroyer(arr, int, int2, int3) {
+  var arrArr=arr;
+  var destroyArr = [];
+  destroyArr=arrArr.filter(function(x){
+    return x!== int && x!== int2 && x!== int3;
+  });
+  return destroyArr;
+}
+
+destroyer([3, 5, 1, 2, 2], 2, 3, 5);
