@@ -1,0 +1,15 @@
+function rot13(str) { // LBH QVQ VG!
+  var key = [];
+  for(i=0; i<str.length; i++){
+    if((!str[i].match(/[A-Z0-9]/i))){ //regex expression that looks for alphanumeric characters
+      key[i] = str[i];
+    } else{
+      key[i] = String.fromCharCode((str[i].charCodeAt(0) - 65 + 13)%26+65); 
+    }
+  }
+  var decrypted = key.join("");
+  return decrypted;
+}
+
+// Change the inputs below to test
+rot13("SERR PBQR PNZC");
