@@ -1,0 +1,36 @@
+function sumFibs(num) {
+  var first = 1;
+  var second = 0;
+  var boole = true;
+  var fib = [1];
+  for(i=1;i<100;i++){
+    fib[i] = first + second;
+    if(boole===true){
+    second +=first;
+      boole = false;
+  } else{
+    first +=second;
+    boole = true;
+  }
+  }
+  for(j=0;j<fib.length;j++){
+    if(fib[j]%2===0){
+      fib[j] = "";
+    } else{
+      fib[j] = fib[j];
+    }
+  }
+  var fib2 = fib.filter(function(x){
+    return x!=="";
+  });
+    fib2 = fib2.filter(function(x){
+    return x<=num;
+  });
+
+  var ans = fib2.reduce(function(previousValue, currentValue){
+    return previousValue + currentValue; 
+  });
+  return ans;
+}
+
+sumFibs(75025);

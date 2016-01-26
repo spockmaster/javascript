@@ -1,0 +1,17 @@
+function repeat(str, num) {
+  var done = ''; //empty string (because of out of scope error if called elsewhere)
+  var returned = []; //empty array
+  if(num<0){ //check if negative 
+    done = ""; //done becomes empty
+  } else{
+    for(i=0; i<num; i++){
+      returned[i] = str; //prints str however many times necessary
+    }
+    
+    done= returned.join(''); //puts it into an array
+  }
+
+  return done;
+}
+
+repeat("abc", 3);

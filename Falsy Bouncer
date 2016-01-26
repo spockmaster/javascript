@@ -1,0 +1,17 @@
+function bouncer(arr) {
+  var newArr=[];
+  var temp=[];
+  for(i=0; i<arr.length; i++){
+    newArr[i] = Boolean(arr[i]);
+    if(newArr[i]===true){
+      newArr[i]=arr[i];
+    }
+  }
+  temp = newArr.filter(function(x){
+    return x!==false;
+  });
+
+  return temp;
+}
+
+bouncer([7, "ate", "", false, 9]);

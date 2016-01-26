@@ -1,0 +1,8 @@
+function palindrome(str) {
+  str = str.toLowerCase().replace(/[\W_]/g, ''); //gets rid of all unecessary characters
+  var reversed = str.split('').reverse().join(''); //reverse the str2
+  return reversed === str; //checks if reversed2 is still the same as str
+
+}
+
+palindrome("rac ecar");
