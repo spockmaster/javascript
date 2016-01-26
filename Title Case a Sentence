@@ -1,0 +1,13 @@
+function titleCase(str) {
+  var temp = []; //empty temporary array
+  var strBreak = str.toLowerCase(); //puts everything to lower case first
+  var strBreak2 = strBreak.split(' '); //splits lowercased str to array
+    for(i=0; i<strBreak2.length; i++){ 
+      temp[i] = strBreak2[i][0].toUpperCase() + strBreak2[i].slice(1);
+      //the "i"th string of the temp array gets the first letter of it capitalized; remainder is added
+    }
+  var complete = temp.join(' '); //put the string back together
+  return complete; //done!
+}
+
+titleCase("I'm a little tea pot");
