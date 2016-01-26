@@ -1,0 +1,13 @@
+var characterCount = [];
+function findLongestWord(str) {
+  var strSplit = str.split(' '); 
+  for(i=0; i<strSplit.length; i++){
+    characterCount[i] = strSplit[i].length;
+  }
+  characterCount.sort(function(x, y){
+  return y-x;
+});
+  return characterCount[0];
+}
+
+findLongestWord("hi there");
